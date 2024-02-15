@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.logo {
+    width: 25%;
+    /* Set a maximum width for responsiveness */
+    height: auto;
+    image-rendering: pixelated;
+    padding-top: 5vh; /* Adjusted for better spacing */
+    
+}
+.tagline{
+    margin-top: 3vw;
+}
+
+#launch {
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(144.72% 144.72% at 50% -25.65%, #1A1C20 54.07%, rgba(207, 117, 0, 0.92) 89.27%, rgba(240, 165, 0, 0.94) 100%);
+    position: relative;
+}
+
+.star1, .star2 {
+    width: 40vw;
+     /* Set a maximum width for responsiveness */
+    height: auto;
+    /*animation: animate 1.7s ease-in-out infinite; */
+    display: block;
+    animation: blink2 1s infinite;
+}
+
+.star2 {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    
+}
+
+@keyframes animate { 
+    0%, 
+   40%,
+    100% { 
+      transform: scale(1); 
+    } 
+    20% { 
+      transform: scale(0); 
+    } 
+  } 
+  @keyframes blink2 {
+    50% {
+      opacity: 0.6;
+    }
+  }
+  
+
+.text-overlay, .image-overlay, .blink-overlay, .footer-overlay {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.text-overlay {
+    top: 30%;
+}
+
+.image-overlay {
+    top: 10%;
+}
+
+.blink-overlay {
+    top: 50%;
+}
+
+.footer-overlay {
+    top: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.launch-body {
+    text-align: center;
+    color: #fff;
+}
+
+ .play {
+    font-family: 'Pixelify Sans';
+    font-size: 3vw; /* Adjusted for responsiveness */
+    margin: 0;
+}
+.built {
+    font-family: 'Pixelify Sans';
+    font-size: 2vw; /* Adjusted for responsiveness */
+    margin-top: 2vw;
+}
+
+
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+     100% {
+        opacity: 1;
+    }
+}
+
+.blinking-text {
+    animation: blink 4s infinite;
+    font-size: 4vw; /* Adjusted for responsiveness */
+    font-family: 'Heaven';
+}
+
+.twitter, .telegram {
+    width: 5vw;
+    height: auto;
+    cursor: pointer;
+    margin: 1vw; /* Adjusted for better spacing */
+}
+
+.footer > img {
+    padding-right: 3vw;
+}
+
+.footer {
+    padding-top: 4vw;
+}
+
+/* Media Queries for responsiveness */
+@media(max-width: 768px) {
+    .logo {
+        width: 50%;
+    }
+
+    .star1, .star2 {
+        width: 70vw;
+    }
+
+    .blinking-text {
+        font-size: 9vw;
+    }
+
+     .play {
+        font-size: 6vw;
+    }
+    .built{
+        font-size: 5vw;
+    }
+    .twitter, .telegram{
+        width: 15vw;
+    }
+    .blink-overlay {
+        top: 45%;
+    }
+}
